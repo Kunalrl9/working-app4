@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet,Image,Button,ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import { firebase } from './Firebase/firebase';
 
 
 const SignUp = () => {
@@ -28,6 +28,7 @@ const SignUp = () => {
     console.log('Password:', password);
     console.log('Confirm Password:', confirmPassword);
     navigation.navigate('Login');
+    console.log(firebase);
   };
   const oky=()=>{
     navigation.navigate('Login');
