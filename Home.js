@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 // import PropTypes from 'deprecated-react-native-prop-types';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
+import { after } from 'lodash';
 
 const Home = () => {
   const carouselData = [
@@ -21,7 +22,18 @@ const Home = () => {
     { id: '7', image: require('../AwesomeProject/assets/MHA.jpeg') },
     { id: '8', image: require('../AwesomeProject/assets/TT.jpeg') },
     { id: '9', image: require('../AwesomeProject/assets/OP.jpeg') },
-    // { id: '11', image: require('../AwesomeProject/assets/JJK,jpeg') },
+    { id: '10', image: require('../AwesomeProject/assets/JJK.jpeg') },
+    { id: '11', image: require('../AwesomeProject/assets/DS.jpeg') },
+    { id: '12', image: require('../AwesomeProject/assets/8.jpeg') },
+  ];
+
+  const menuData2 = [
+    { id: '13', image: require('../AwesomeProject/assets/week/311638.jpg') },
+    { id: '14', image: require('../AwesomeProject/assets/week/311824.jpg') },
+    { id: '15', image: require('../AwesomeProject/assets/week/313120.jpg') },
+    { id: '16', image: require('../AwesomeProject/assets/week/313420.jpg') },
+    { id: '17', image: require('../AwesomeProject/assets/week/314236.jpg') },
+    { id: '18', image: require('../AwesomeProject/assets/week/315466.jpg') },
   ];
 
   const renderItem = ({ item }) => (
@@ -35,8 +47,17 @@ const Home = () => {
     menuData.map(item => (
       <TouchableOpacity key={item.id} style={styles.menuItem}>
         <Image source={item.image} style={styles.menuItemImage} />
+        <Text style={styles.menuItemText}>Menu {item.id}</Text>
       </TouchableOpacity>
     ));
+
+  const renderSecondMenuItems = () =>
+    menuData2.map(item => (
+    <TouchableOpacity key={item.id} style={styles.menuItem2}>
+      <Image source={item.image} style={styles.menuItemImage2} />
+      <Text style={styles.menuItemText2}>Menu {item.id}</Text>
+    </TouchableOpacity>
+  ));
 
   return (
     <View style={styles.container}>
@@ -73,9 +94,17 @@ const Home = () => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer}>
         {renderMenuItems()}
       </ScrollView>
-    </View>
+
+       {/* Second Horizontal Scroll Menu */}
+    <Text style={styles.title2}>WEEKLY SHONEN JUMP</Text>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
+      {renderSecondMenuItems()}
+    </ScrollView>
+  </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -139,24 +168,60 @@ const styles = StyleSheet.create({
   },
   title:{
     top: -210,
-    marginLeft: -260,
+    marginLeft: -300,
     fontSize: 20,
-    fontFamily: 'Rajdhani-Bold.ttf',
+    marginBottom: -60,
+    color: 'purple',
+  },
+  title2:{
+    top: -160,
+    marginLeft: -170,
+    fontSize: 20,
+    marginBottom: -100,
+    color: 'purple',
   },
 
   menuContainer: {
     marginTop: -200,
-    marginLeft: 10,
+    marginLeft: 0,
+    bottom: -50,
+  },
+  menuContainer2:{
+    marginTop: -210,
+    marginLeft: 0,
+    // marginBottom: 10,
+    bottom:-100,
   },
   menuItem: {
-    marginRight: 20,
+    marginRight: 5,
     // borderRadius: 8,
-    overflow: 'hidden',
+    overflow: 'visible',
+    margin: 5,
   },
   menuItemImage: {
     width: 100,
     height: 150,
   },
+  menuItem2: {
+    marginRight: 5,
+    // borderRadius: 8,
+    overflow: 'visible',
+    margin: 5,
+  },
+  menuItemImage2: {
+    width: 100,
+    height: 150,
+    bottom: -50,
+  },
+  menuItemText: {
+    marginTop: 5,
+    textAlign: 'center',
+  },
+
+  menuItemText2: {
+    marginTop: 5,
+    textAlign: 'center',
+  },
 });
 
-export default Home;
+export default Home; 
