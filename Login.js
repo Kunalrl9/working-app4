@@ -1,12 +1,14 @@
 // Import necessary components and libraries
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 
 // Your Login component
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation();
 
 
   const handleLogin = () => {
@@ -14,6 +16,10 @@ const Login = () => {
     console.log('Username:', username);
     console.log('Password:', password);
   };
+
+  const ok=()=>{
+    navigation.navigate('Home')
+  }
 
   const goToHomeP = () => {
     
@@ -42,7 +48,7 @@ const Login = () => {
       />
 
       <TouchableOpacity style={styles.submitButton} onPress={goToHomeP}>
-        <Text style={styles.submitButtonText}>Login</Text>
+        <Text style={styles.submitButtonText} onPress={ok}>Login</Text>
       </TouchableOpacity>
 
      

@@ -20,13 +20,14 @@ const Home = () => {
     { id: '6', image: require('../AwesomeProject/assets/DAYS.jpeg') },
     { id: '7', image: require('../AwesomeProject/assets/MHA.jpeg') },
     { id: '8', image: require('../AwesomeProject/assets/TT.jpeg') },
-
+    { id: '9', image: require('../AwesomeProject/assets/OP.jpeg') },
+    // { id: '11', image: require('../AwesomeProject/assets/JJK,jpeg') },
   ];
 
   const renderItem = ({ item }) => (
     <View style={styles.carouselItem}>
       <Image source={item.image} style={styles.carouselImage} 
-      resizeMode="contain"/>
+      />
     </View>
   );
 
