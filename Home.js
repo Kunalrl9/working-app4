@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 // import PropTypes from 'deprecated-react-native-prop-types';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
@@ -21,7 +21,9 @@ const Home = () => {
     { id: '7', image: require('../AwesomeProject/assets/MHA.jpeg') },
     { id: '8', image: require('../AwesomeProject/assets/TT.jpeg') },
     { id: '9', image: require('../AwesomeProject/assets/OP.jpeg') },
-    // { id: '11', image: require('../AwesomeProject/assets/JJK,jpeg') },
+    { id: '10', image: require('../AwesomeProject/assets/JJK.jpeg') },
+    { id: '11', image: require('../AwesomeProject/assets/DS.jpeg') },
+    { id: '12', image: require('../AwesomeProject/assets/8.jpeg') },
   ];
 
   const renderItem = ({ item }) => (
@@ -76,6 +78,8 @@ const Home = () => {
     </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -159,4 +163,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Home; 
