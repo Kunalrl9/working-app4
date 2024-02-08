@@ -5,7 +5,6 @@ import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'reac
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
-import { after } from 'lodash';
 
 const Home = () => {
   const carouselData = [
@@ -17,23 +16,23 @@ const Home = () => {
   
 
   const menuData = [
-    { id: '5', image: require('../AwesomeProject/assets/KK.jpeg') },
-    { id: '6', image: require('../AwesomeProject/assets/DAYS.jpeg') },
-    { id: '7', image: require('../AwesomeProject/assets/MHA.jpeg') },
-    { id: '8', image: require('../AwesomeProject/assets/TT.jpeg') },
-    { id: '9', image: require('../AwesomeProject/assets/OP.jpeg') },
-    { id: '10', image: require('../AwesomeProject/assets/JJK.jpeg') },
-    { id: '11', image: require('../AwesomeProject/assets/DS.jpeg') },
-    { id: '12', image: require('../AwesomeProject/assets/8.jpeg') },
+    { id: 'Kagurabachi', image: require('../AwesomeProject/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS', image: require('../AwesomeProject/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia', image: require('../AwesomeProject/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist', image: require('../AwesomeProject/assets/TT.jpeg') },
+    { id: 'One Piece', image: require('../AwesomeProject/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen', image: require('../AwesomeProject/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..', image: require('../AwesomeProject/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...', image: require('../AwesomeProject/assets/8.jpeg') },
   ];
 
   const menuData2 = [
-    { id: '13', image: require('../AwesomeProject/assets/week/311638.jpg') },
-    { id: '14', image: require('../AwesomeProject/assets/week/311824.jpg') },
-    { id: '15', image: require('../AwesomeProject/assets/week/313120.jpg') },
-    { id: '16', image: require('../AwesomeProject/assets/week/313420.jpg') },
-    { id: '17', image: require('../AwesomeProject/assets/week/314236.jpg') },
-    { id: '18', image: require('../AwesomeProject/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', image: require('../AwesomeProject/assets/week/311638.jpg') },
+    { id: 'Blue Box', image: require('../AwesomeProject/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', image: require('../AwesomeProject/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', image: require('../AwesomeProject/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', image: require('../AwesomeProject/assets/week/314236.jpg') },
+    { id: 'Kill Blue', image: require('../AwesomeProject/assets/week/315466.jpg') },
   ];
 
   const renderItem = ({ item }) => (
@@ -47,7 +46,7 @@ const Home = () => {
     menuData.map(item => (
       <TouchableOpacity key={item.id} style={styles.menuItem}>
         <Image source={item.image} style={styles.menuItemImage} />
-        <Text style={styles.menuItemText}>Menu {item.id}</Text>
+        <Text style={styles.menuItemText}> {item.id}</Text>
       </TouchableOpacity>
     ));
 
@@ -61,6 +60,9 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
+      {/* <View style={styles.container1}> */}
+
+      
       <Text style={styles.headerText}>AGON TALES</Text>
       
 
@@ -76,6 +78,7 @@ const Home = () => {
           <Text style={styles.buttonText}>Latest</Text>
         </TouchableOpacity>
       </View>
+      {/* </View> */}
 
       {/* Carousel */}
       <Carousel
@@ -113,6 +116,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     resizeMode: 'contain',
   },
+  // container1:{
+  //   padding:20,
+  //   paddingTop:40,
+  //   backgroundColor:'purple'
+  // },
   headerText: {
     fontSize: 18,
     fontWeight: 'bold',
@@ -174,10 +182,10 @@ const styles = StyleSheet.create({
     color: 'purple',
   },
   title2:{
-    top: -160,
+    top: -180,
     marginLeft: -170,
     fontSize: 20,
-    marginBottom: -100,
+    marginBottom: -150,
     color: 'purple',
   },
 
@@ -187,7 +195,7 @@ const styles = StyleSheet.create({
     bottom: -50,
   },
   menuContainer2:{
-    marginTop: -210,
+    marginTop: -220,
     marginLeft: 0,
     // marginBottom: 10,
     bottom:-100,
@@ -211,16 +219,20 @@ const styles = StyleSheet.create({
   menuItemImage2: {
     width: 100,
     height: 150,
-    bottom: -50,
+    bottom: -90,
   },
    menuItemText: {
-    marginTop: 5,
-    textAlign: 'center',
+    textAlign: 'left',
+    fontSize: 10,
+    fontWeight: 'bold',
   },
 
   menuItemText2: {
-    marginTop: 5,
-    textAlign: 'center',
+    textAlign: 'left',
+    fontSize: 10,
+    fontWeight: 'bold',
+    marginBottom:-90,
+    marginTop:90,
   },
 });
 
