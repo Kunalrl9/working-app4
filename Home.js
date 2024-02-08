@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     height: 150,
     bottom: -50,
   },
-  menuItemText: {
+   menuItemText: {
     marginTop: 5,
     textAlign: 'center',
   },
