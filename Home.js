@@ -2,9 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 // import PropTypes from 'deprecated-react-native-prop-types';
 import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
+import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+
+
+
 
 const Home = () => {
   const carouselData = [
@@ -34,6 +40,10 @@ const Home = () => {
     { id: 'WITCH WATCH', image: require('../AwesomeProject/assets/week/314236.jpg') },
     { id: 'Kill Blue', image: require('../AwesomeProject/assets/week/315466.jpg') },
   ];
+  const navigation = useNavigation();
+  const oky=()=>{
+    navigation.navigate('Search');
+  }
 
   const renderItem = ({ item }) => (
     <View style={styles.carouselItem}>
@@ -64,7 +74,8 @@ const Home = () => {
 
       
       <Text style={styles.headerText}>AGON TALES</Text>
-      
+      <Feather onPress={oky} name="search" size={24} color="black"
+        style={styles.searchBtn} />
 
       {/* Buttons */}
       <View style={styles.buttonContainer}>
@@ -103,6 +114,11 @@ const Home = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
       {renderSecondMenuItems()}
     </ScrollView>
+   
+    
+    
+  
+
   </View>
   );
 };
@@ -128,7 +144,7 @@ const styles = StyleSheet.create({
     alignItems: '',
     alignSelf: 'stretch',
     marginLeft: 20,
-    marginTop: 20,
+    marginTop: 15,
     marginBottom: 20,
   },
   buttonContainer: {
@@ -145,7 +161,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginLeft: -180,
-    marginTop: -20,
+    marginTop: -30,
   },
   buttonText: {
     fontWeight: 'bold',
@@ -182,10 +198,10 @@ const styles = StyleSheet.create({
     color: 'purple',
   },
   title2:{
-    top: -180,
+    top: -170,
     marginLeft: -170,
     fontSize: 20,
-    marginBottom: -150,
+    marginBottom: -160,
     color: 'purple',
   },
 
@@ -198,7 +214,7 @@ const styles = StyleSheet.create({
     marginTop: -220,
     marginLeft: 0,
     // marginBottom: 10,
-    bottom:-100,
+    bottom:-120,
   },
   menuItem: {
     marginRight: 5,
@@ -231,8 +247,14 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     fontSize: 10,
     fontWeight: 'bold',
-    marginBottom:-90,
+    marginBottom:-80,
     marginTop:90,
+  },
+
+  searchBtn: {
+    marginLeft:350,
+    paddingLeft: 10,
+    marginTop: -20,
   },
 });
 
