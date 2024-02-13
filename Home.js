@@ -14,36 +14,42 @@ import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
   const carouselData = [
-    { id: '1', image: require('../AwesomeProject/assets/fire.jpg') },
-    { id: '2', image: require('../AwesomeProject/assets/images.jpg') },
-    { id: '3', image: require('../AwesomeProject/assets/sword-art-online-sao.png') },
+    { id: '1', image: require('../working-app/assets/fire.jpg') },
+    { id: '2', image: require('../working-app/assets/images.jpg') },
+    { id: '3', image: require('../working-app/assets/sword-art-online-sao.png') },
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
   
 
   const menuData = [
-    { id: 'Kagurabachi', image: require('../AwesomeProject/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS', image: require('../AwesomeProject/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia', image: require('../AwesomeProject/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist', image: require('../AwesomeProject/assets/TT.jpeg') },
-    { id: 'One Piece', image: require('../AwesomeProject/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen', image: require('../AwesomeProject/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..', image: require('../AwesomeProject/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...', image: require('../AwesomeProject/assets/8.jpeg') },
+    { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia', image: require('../working-app/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist', image: require('../working-app/assets/TT.jpeg') },
+    { id: 'One Piece', image: require('../working-app/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen', image: require('../working-app/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..', image: require('../working-app/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...', image: require('../working-app/assets/8.jpeg') },
   ];
+  const navigation1 = useNavigation();
+  const okx=()=>{
+    navigation.navigate('Browes');
+  }
+  
 
   const menuData2 = [
-    { id: 'Akane-banashi', image: require('../AwesomeProject/assets/week/311638.jpg') },
-    { id: 'Blue Box', image: require('../AwesomeProject/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', image: require('../AwesomeProject/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', image: require('../AwesomeProject/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', image: require('../AwesomeProject/assets/week/314236.jpg') },
-    { id: 'Kill Blue', image: require('../AwesomeProject/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
+    { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
   ];
   const navigation = useNavigation();
   const oky=()=>{
     navigation.navigate('Search');
   }
+  
 
   const renderItem = ({ item }) => (
     <View style={styles.carouselItem}>
@@ -51,7 +57,10 @@ const Home = () => {
       />
     </View>
   );
-
+  const navigation2 = useNavigation();
+  const okz=()=>{
+    navigation.navigate('AccountScreen');
+  }
   const renderMenuItems = () =>
     menuData.map(item => (
       <TouchableOpacity key={item.id} style={styles.menuItem}>
@@ -114,11 +123,39 @@ const Home = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
       {renderSecondMenuItems()}
     </ScrollView>
-   
-    
-    
-  
 
+      
+    <View style={styles.test1}>
+
+      {/* Five buttons at the bottom with custom icons */}
+      <View style={styles.bottomButtonsContainer}>
+        <TouchableOpacity style={styles.bottomButton}>
+          <Image source={require('../working-app/assets/icon/discover.png')} style={styles.customIcon} />
+          {/* <Text style={styles.bottomButtonText}>discover</Text> */}
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.bottomButton}>
+          <Image source={require('../working-app/assets/icon/mylist1.png')} style={styles.customIcon1} />
+          {/* <Text style={styles.bottomButtonText}>my list</Text> */}
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.bottomButton, styles.floatingButton]}>
+          <Image source={require('../working-app/assets/icon/Agontales.png')} style={styles.customIcon2} />
+          {/* <Text style={styles.bottomButtonText}>Manga makre</Text> */}
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={okx} style={styles.bottomButton}>
+          <Image  source={require('../working-app/assets/icon/browes.png')} style={styles.customIcon3} />
+          {/* <Text style={styles.bottomButtonText}>borwer</Text> */}
+        </TouchableOpacity>
+        
+
+        <TouchableOpacity onPress={okz} style={styles.bottomButton}>
+          <Image source={require('../working-app/assets/icon/account3.png')} style={styles.customIcon4} />
+          {/* <Text style={styles.bottomButtonText}>account</Text> */}
+        </TouchableOpacity>
+      </View>
+    </View>
   </View>
   );
 };
@@ -132,6 +169,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     resizeMode: 'contain',
   },
+  // // test1: {
+  // //   height:45,
+  // //   width:490,
+  // //   backgroundColor:"purple",
+  // //   alignItems: 'bottom',
+  // //   // marginBottom:10,
+  // //   // borderRadius:10,
+    
+  // },
   // container1:{
   //   padding:20,
   //   paddingTop:40,
@@ -256,6 +302,61 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: -20,
   },
+
+  bottomButtonsContainer: {
+    flexDirection: 'row',
+    borderTopRightRadius:20,
+    borderTopLeftRadius:20,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: -200,
+    width:400,
+    height: 70,
+    backgroundColor: '#D462FF', // Change the color as per your preference
+    // position: 'absolute',
+    bottom: 0,
+  },
+  bottomButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  floatingButton: {
+    bottom: 15, // Adjust the value to control the floating effect
+
+  },
+  customIcon: {
+    width: 40, // Adjust the width and height according to your custom icon size
+    height: 40,
+    padding:30,
+    marginRight: 35, // Add margin to separate the icon and text
+  },
+  customIcon1: {
+    width: 40, // Adjust the width and height according to your custom icon size
+    height: 40,
+    padding:20,
+    marginRight: 25, // Add margin to separate the icon and text
+  },
+  customIcon2: {
+    width: 40, // Adjust the width and height according to your custom icon size
+    height: 40,
+    padding:50,
+    marginRight: 39, // Add margin to separate the icon and text
+  },
+  customIcon3: {
+    
+    width: 40, // Adjust the width and height according to your custom icon size
+    height: 40,
+    marginRight: 45, // Add margin to separate the icon and text
+  },
+  customIcon4: {
+    width: 40, // Adjust the width and height according to your custom icon size
+    height: 40,
+    marginRight: 10, // Add margin to separate the icon and text
+  },
+  // bottomButtonText: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  // },
 });
 
-export default Home; 
+export default Home;
