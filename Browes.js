@@ -1,24 +1,49 @@
 import React from 'react'
+import PropTypes from 'deprecated-react-native-prop-types';
 import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TextInput } from 'react-native-gesture-handler';
 
 export default function Browes() {
-  const genreData = [
-    { id: 'Battle/Action', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Comedy', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'Sport / Activities', image: require('../working-app/assets/TT.jpeg') },
+  const menuData3 = [
+    { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia', image: require('../working-app/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist', image: require('../working-app/assets/TT.jpeg') },
     { id: 'One Piece', image: require('../working-app/assets/OP.jpeg') },
     { id: 'Jujutsu Kaisen', image: require('../working-app/assets/JJK.jpeg') },
     { id: 'Demon Slayer:..', image: require('../working-app/assets/DS.jpeg') },
     { id: 'Sachi’s Records...', image: require('../working-app/assets/8.jpeg') },
-    // Add more genres as needed
   ];
 
-  return (
+  const menuData4 = [
+    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
+    { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
+  ];
 
-    <View style={styles.container}>
+  const renderMenuItems = () =>
+    menuData3.map(item => (
+      <TouchableOpacity key={item.id} style={styles.menuItem}>
+        <Image source={item.image} style={styles.menuItemImage} />
+        <Text style={styles.menuItemText}> {item.id}</Text>
+      </TouchableOpacity>
+    ));
+
+  const renderSecondMenuItems = () =>
+    menuData4.map(item => (
+    <TouchableOpacity key={item.id} style={styles.menuItem2}>
+      <Image source={item.image} style={styles.menuItemImage2} />
+      <Text style={styles.menuItemText2}>Menu {item.id}</Text>
+    </TouchableOpacity>
+  ));
+
+
+  return (
     <View style={styles.container1}>
       <Text style={styles.Text}>Browes</Text>
     <View>
@@ -27,7 +52,7 @@ export default function Browes() {
         <View style={styles.title2}>
         <Text style={styles.title3}>By Genre</Text>
         </View>
-        <View>
+        <View style={styles.move}>
         <Text style={styles.text1}>Battle/Action</Text>
         <Text style={styles.text2}>Comedy</Text>
         <Text style={styles.text3}>Sport / Activities</Text>
@@ -45,37 +70,41 @@ export default function Browes() {
         <Text style={styles.text15}>Martial Arts</Text>
         <Text style={styles.text16}>Shounen</Text>
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={true} style={styles.scrollMenu}>
-          {genreData.map((item, index) => (
-            <View TouchableOpacity key={index} style={styles.imageContainer}>
-              <Image source={item.image} style={styles.image} />
-              <Text style={styles.imageText}>{item.id}</Text>
-            </View>
-          ))}
-        </ScrollView>
         
-      </View>
-      </View>
+         {/* Horizontal Scroll Menu */}
+      <Text style={styles.title8}>TOP HOT</Text>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer}>
+        {renderMenuItems()} 
+      </ScrollView>
+
+       {/*Second Horizontal Scroll Menu*/}
+    <Text style={styles.title7}>WEEKLY SHONEN JUMP</Text>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
+      {renderSecondMenuItems()}
+    </ScrollView>
+
+        </View>
+        
       </View>
   );
 }
 const styles = StyleSheet.create({
-    // container: {
-    //     flex: 1,
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     resizeMode: 'contain',
-    //     top:-200,
-    //   },
-    container1:{
-        padding:20,
-        width:395,
-        height:130,
-        paddingTop:40,
-        backgroundColor:'purple',
-        borderBottomLeftRadius:25,
-        borderBottomRightRadius:25,
-      },
+    container2: {
+      width:395,
+      height:130,
+      paddingTop:40,
+      padding: 20,
+      backgroundColor: 'purple',
+      borderBottomLeftRadius: 25,
+      borderBottomRightRadius: 25,
+    
+    },
+    container1: {
+      flex: 1,
+    },
+    move:{
+      left:20,
+    },
       Text: {
         fontSize: 18,
         fontWeight: 'bold',
@@ -90,9 +119,10 @@ const styles = StyleSheet.create({
     textInput:{
         padding:7,
         paddingHorizontal:16,
-        backgroundColor:'white',
+        backgroundColor:'purple',
         borderRadius:8,
-        width:'85%'
+        width:'85%',
+        color:'white',
       },
       text1:{
         top:50,
@@ -304,26 +334,101 @@ const styles = StyleSheet.create({
       },
       title3:{
         top:40,
+        left:10,
         fontSize: 18,
         fontWeight: 'bold',
       },
-      scrollMenu: {
-        marginTop: -90,
-        flexDirection: 'row',
-        height: 250,
+      // scrollMenu: {
+      //   marginTop: -90,
+      //   flexDirection: 'row',
+      //   height: 250,
+      // },
+      // imageContainer: {
+      //   marginRight: 10,
+      //   width: 100,
+      //   height: 250,
+      // },
+      // image: {
+      //   width: 100,
+      //   height: 150,
+      // },
+      // imageText: {
+      //   textAlign: 'center',
+      //   marginTop: 5,
+      //   color: 'white',
+      // },
+      // carouselItem: {
+      //   // backgroundColor: 'black',
+      //   borderRadius: 8,
+      //   overflow: 'hidden',
+      //   resizeMode:"contain",
+      //   // marginRight: -190,
+      //   // marginLeft: -10,
+      // },
+      // carouselImage: {
+      //   width: 345,
+      //   height: 193,
+      //   resizeMode:"contain",
+      //   // margin: 40,
+      // },
+      title8:{
+        top: 100,
+        marginLeft: 10,
+        fontSize: 20,
+        // marginBottom: -60,
+        color: 'purple',
       },
-      imageContainer: {
-        marginRight: 10,
-        width: 100,
-        height: 250,
+      title7:{
+        top: -150,
+        marginLeft: 10,
+        fontSize: 20,
+        marginBottom: -230,
+        color: 'purple',
       },
-      image: {
+    
+      menuContainer: {
+        marginTop: -150,
+        marginLeft: 5,
+        bottom: -50,
+      },
+      menuContainer2:{
+        marginTop: -123,
+        marginLeft: 5,
+        // marginBottom: 10,
+        bottom:-400,
+      },
+      menuItem: {
+        marginRight: 5,
+        // borderRadius: 8,
+        overflow: 'visible',
+        margin: 5,
+      },
+      menuItemImage: {
         width: 100,
         height: 150,
       },
-      imageText: {
-        textAlign: 'center',
-        marginTop: 5,
-        color: 'white',
+      menuItem2: {
+        marginRight: 5,
+        // borderRadius: 8,
+        overflow: 'visible',
+        margin: 5,
+      },
+      menuItemImage2: {
+        width: 100,
+        height: 150,
+        // bottom: -90,
+      },
+       menuItemText: {
+        textAlign: 'left',
+        fontSize: 10,
+        fontWeight: 'bold',
+      },
+    
+      menuItemText2: {
+        textAlign: 'left',
+        fontSize: 10,
+        fontWeight: 'bold',
+        // marginBottom:-80,
+        // marginTop:90,
       },
 });
