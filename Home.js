@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 // import PropTypes from 'deprecated-react-native-prop-types';
-import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView,FlatList} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -11,7 +11,12 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-
+// export default function Home() {
+//   return (
+    
+//     );
+  
+// };
 const Home = () => {
   const carouselData = [
     { id: '1', image: require('../working-app/assets/fire.jpg') },
@@ -20,7 +25,7 @@ const Home = () => {
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
   
-
+  
   const menuData = [
     { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
     { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
@@ -45,6 +50,7 @@ const Home = () => {
     { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
     { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
   ];
+  
   const navigation = useNavigation();
   const oky=()=>{
     navigation.navigate('Search');
@@ -63,11 +69,15 @@ const Home = () => {
   }
   const renderMenuItems = () =>
     menuData.map(item => (
-      <TouchableOpacity key={item.id} style={styles.menuItem}>
+      <TouchableOpacity onPress={oka} key={item.id} style={styles.menuItem}>
         <Image source={item.image} style={styles.menuItemImage} />
         <Text style={styles.menuItemText}> {item.id}</Text>
       </TouchableOpacity>
     ));
+    const navigation3 = useNavigation();
+  const oka=()=>{
+    navigation.navigate('OpenPage1');
+  }
 
   const renderSecondMenuItems = () =>
     menuData2.map(item => (
@@ -78,10 +88,14 @@ const Home = () => {
   ));
 
   return (
-    <View style={styles.container}>
+    <View ScrollView style={styles.container}>
+      {/* <FlatList
+      data={people}
+      renderItem={({ item }) => (
+        <Text style={styles.item}>{item.name}</Text>
+      )}
+      /> */}
       {/* <View style={styles.container1}> */}
-
-      
       <Text style={styles.headerText}>AGON TALES</Text>
       <Feather onPress={oky} name="search" size={24} color="black"
         style={styles.searchBtn} />
