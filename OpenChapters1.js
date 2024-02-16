@@ -4,14 +4,14 @@ import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'reac
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
-import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
-const OpenPage1= () => {
+const OpenChapters1= () => {
     [];
     const navigation = useNavigation();
-        const okv=()=>{
-    navigation.navigate('OpenChapters1');
+        const oke=()=>{
+    navigation.navigate('OpenPage1');
   }
   return (
     <View style={styles.container}>
@@ -31,12 +31,12 @@ const OpenPage1= () => {
         </View>
         <View>
         <TouchableOpacity>
-          <Text style={styles.buttonText1}>Description</Text>
+          <Text onPress={oke} style={styles.buttonText1}>Description</Text>
         <View style={styles.mark}>
         </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text onPress={okv} style={styles.buttonText2}>Chapters</Text>
+          <Text style={styles.buttonText2}>Chapters</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.line}>
@@ -44,8 +44,25 @@ const OpenPage1= () => {
         <View style={styles.line1}>
         </View>
         <View>
-        <Text style={styles.descrip}>Young Chihiro spends his days training under his famous swordsmith father. One day he hopes to become a great sword-maker himself. The goofy father and the serious son--they thought these days would last forever. But suddenly, tragedy strikes. A dark day soaked in blood. Chihiro and his blade now live only for revenge. Epic sword battle action!</Text>
-        </View>
+      <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text  style={styles.buttonText0}>Ch.01</Text>
+        </TouchableOpacity>
+      <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text style={styles.buttonText0}>Ch.02</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text style={styles.buttonText0}>Ch.03</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text style={styles.buttonText0}>Ch.04</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text style={styles.buttonText0}>Ch.05</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
+          <Text style={styles.buttonText0}>Ch.06</Text>
+        </TouchableOpacity>
+      </View>
         <View>
         <TouchableOpacity>
         <View style={styles.border}>
@@ -62,6 +79,7 @@ const OpenPage1= () => {
         </View>
     </View>
   );
+  
 };
 const styles = StyleSheet.create({
     container: {
@@ -71,7 +89,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
       },
     backBlue:{
-        top:-190,
+        top:-120,
         width:395,
         height:400,
         alignSelf:'center',
@@ -105,46 +123,43 @@ const styles = StyleSheet.create({
         color:"purple",
     },
     line:{
-        top: -240,
+        top: -170,
         width:500,
         height:0,
         borderWidth:1,
         borderColor:'purple',
     },
     line1:{
-        top: -210,
+        top: -140,
         width:500,
         height:0,
         borderWidth:1,
         borderColor:'purple',
     },
     buttonText1:{
-        top:-190,
+        top:-120,
         left:-150,
         fontSize: 15,
         fontWeight: 'bold',
         textAlign:'left',
     },
     buttonText2:{
-        top:-220,
+        top:-150,
         left:150,
         fontSize: 15,
         fontWeight: 'bold',
         textAlign:'left',
     },
     mark:{
-        top:-190,
-        left:-145,
+        top:-120,
+        left:152,
         width:60,
         height:10,
         backgroundColor:'red',
         borderRadius:5,
     },
-    descrip:{
-        top:-210,
-    },
     border:{
-        top:92,
+        top:21,
 	    width:395,
         height:51,
         backgroundColor:'#EEEEEE',
@@ -154,7 +169,7 @@ const styles = StyleSheet.create({
         elevation:8,
     },
     border1:{
-        top:40,
+        top:-30,
         left:82,
         width:230,
         height:51,
@@ -176,6 +191,14 @@ const styles = StyleSheet.create({
         shadowColor:'black',
         elevation:10,
     },
+    buttonText0:{
+        top:-130,
+        left:-160,
+        margin:10,
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'left',
+    },
 });
 
-export default OpenPage1 ;
+export default OpenChapters1 ;

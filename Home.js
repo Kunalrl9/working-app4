@@ -11,12 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-// export default function Home() {
-//   return (
-    
-//     );
-  
-// };
+
 const Home = () => {
   const carouselData = [
     { id: '1', image: require('../working-app/assets/fire.jpg') },
@@ -25,7 +20,7 @@ const Home = () => {
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
   
-  
+
   const menuData = [
     { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
     { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
@@ -43,14 +38,13 @@ const Home = () => {
   
 
   const menuData2 = [
-    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
+    {onPress:'oka', id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
     { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
     { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
     { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
     { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
     { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
   ];
-  
   const navigation = useNavigation();
   const oky=()=>{
     navigation.navigate('Search');
@@ -69,7 +63,7 @@ const Home = () => {
   }
   const renderMenuItems = () =>
     menuData.map(item => (
-      <TouchableOpacity onPress={oka} key={item.id} style={styles.menuItem}>
+      <TouchableOpacity  key={item.id} style={styles.menuItem}>
         <Image source={item.image} style={styles.menuItemImage} />
         <Text style={styles.menuItemText}> {item.id}</Text>
       </TouchableOpacity>
@@ -86,6 +80,11 @@ const Home = () => {
       <Text style={styles.menuItemText2}>Menu {item.id}</Text>
     </TouchableOpacity>
   ));
+
+  const navigation4 = useNavigation();
+  const okg=()=>{
+    navigation.navigate('MangaMaker');
+  }
 
   return (
     <View ScrollView style={styles.container}>
@@ -153,7 +152,7 @@ const Home = () => {
           {/* <Text style={styles.bottomButtonText}>my list</Text> */}
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.bottomButton, styles.floatingButton]}>
+        <TouchableOpacity onPress={okg} style={[styles.bottomButton, styles.floatingButton]}>
           <Image source={require('../working-app/assets/icon/Agontales.png')} style={styles.customIcon2} />
           {/* <Text style={styles.bottomButtonText}>Manga makre</Text> */}
         </TouchableOpacity>
