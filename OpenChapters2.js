@@ -6,14 +6,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import storage from '@react-native-firebase/storage';
-import { Linking } from 'react-native';
 
-const OpenChapters1= () => {
+const OpenChapters2= () => {
     [];
     const navigation = useNavigation();
         const oke=()=>{
-    navigation.navigate('OpenPage1');
+    navigation.navigate('OpenPage2');
   }
   return (
     <View style={styles.container}>
@@ -25,11 +23,11 @@ const OpenChapters1= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/KK.jpeg?alt=media&token=72d52ff2-a791-423d-ae34-9da85bb2f72c'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DS.jpeg?alt=media&token=b28548a4-97b3-4e4b-9cc6-471a57c60dd5'
         }}
         />
-        <Text style={styles.title}>Kagurabachi</Text>
-        <Text style={styles.text}>HOKAZONO Takeru</Text>
+        <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
+        <Text style={styles.text}>KOYOHARU GOTOUGE</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -203,4 +201,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenChapters1 ;
+export default OpenChapters2 ;

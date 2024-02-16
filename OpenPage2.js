@@ -4,16 +4,14 @@ import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'reac
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Carousel from 'react-native-snap-carousel';
-import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import storage from '@react-native-firebase/storage';
-import { Linking } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
-const OpenChapters1= () => {
+const OpenPage2= () => {
     [];
     const navigation = useNavigation();
-        const oke=()=>{
-    navigation.navigate('OpenPage1');
+        const okv=()=>{
+    navigation.navigate('OpenChapters2');
   }
   return (
     <View style={styles.container}>
@@ -25,20 +23,20 @@ const OpenChapters1= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/KK.jpeg?alt=media&token=72d52ff2-a791-423d-ae34-9da85bb2f72c'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DS.jpeg?alt=media&token=b28548a4-97b3-4e4b-9cc6-471a57c60dd5'
         }}
         />
-        <Text style={styles.title}>Kagurabachi</Text>
-        <Text style={styles.text}>HOKAZONO Takeru</Text>
+        <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
+        <Text style={styles.text}>KOYOHARU GOTOUGE</Text>
         </View>
         <View>
         <TouchableOpacity>
-          <Text onPress={oke} style={styles.buttonText1}>Description</Text>
+          <Text style={styles.buttonText1}>Description</Text>
         <View style={styles.mark}>
         </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={styles.buttonText2}>Chapters</Text>
+          <Text onPress={okv} style={styles.buttonText2}>Chapters</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.line}>
@@ -46,25 +44,8 @@ const OpenChapters1= () => {
         <View style={styles.line1}>
         </View>
         <View>
-      <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text  style={styles.buttonText0}>Ch.01</Text>
-        </TouchableOpacity>
-      <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText0}>Ch.02</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText0}>Ch.03</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText0}>Ch.04</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText0}>Ch.05</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText0}>Ch.06</Text>
-        </TouchableOpacity>
-      </View>
+        <Text style={styles.descrip}>Learning to destroy demons won’t be easy, and Tanjiro barely knows where to start. The surprise appearance of another boy named Giyu, who seems to know what’s going on, might provide some answers?but only if Tanjiro can stop Giyu from killing his sister first!</Text>
+        </View>
         <View>
         <TouchableOpacity>
         <View style={styles.border}>
@@ -81,7 +62,6 @@ const OpenChapters1= () => {
         </View>
     </View>
   );
-  
 };
 const styles = StyleSheet.create({
     container: {
@@ -91,7 +71,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
       },
     backBlue:{
-        top:-120,
+        top:-190,
         width:395,
         height:400,
         alignSelf:'center',
@@ -125,43 +105,46 @@ const styles = StyleSheet.create({
         color:"purple",
     },
     line:{
-        top: -170,
+        top: -240,
         width:500,
         height:0,
         borderWidth:1,
         borderColor:'purple',
     },
     line1:{
-        top: -140,
+        top: -210,
         width:500,
         height:0,
         borderWidth:1,
         borderColor:'purple',
     },
     buttonText1:{
-        top:-120,
+        top:-190,
         left:-150,
         fontSize: 15,
         fontWeight: 'bold',
         textAlign:'left',
     },
     buttonText2:{
-        top:-150,
+        top:-220,
         left:150,
         fontSize: 15,
         fontWeight: 'bold',
         textAlign:'left',
     },
     mark:{
-        top:-120,
-        left:152,
+        top:-190,
+        left:-145,
         width:60,
         height:10,
         backgroundColor:'red',
         borderRadius:5,
     },
+    descrip:{
+        top:-210,
+    },
     border:{
-        top:21,
+        top:92,
 	    width:395,
         height:51,
         backgroundColor:'#EEEEEE',
@@ -171,7 +154,7 @@ const styles = StyleSheet.create({
         elevation:8,
     },
     border1:{
-        top:-30,
+        top:40,
         left:82,
         width:230,
         height:51,
@@ -193,14 +176,6 @@ const styles = StyleSheet.create({
         shadowColor:'black',
         elevation:10,
     },
-    buttonText0:{
-        top:-130,
-        left:-160,
-        margin:10,
-        fontSize: 15,
-        fontWeight: 'bold',
-        textAlign: 'left',
-    },
 });
 
-export default OpenChapters1 ;
+export default OpenPage2 ;

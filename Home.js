@@ -85,6 +85,10 @@ const Home = () => {
   const okg=()=>{
     navigation.navigate('MangaMaker');
   }
+  const navigation5 = useNavigation();
+  const oki=()=>{
+    navigation.navigate('MangaMaker');
+  }
 
   return (
     <View ScrollView style={styles.container}>
@@ -147,7 +151,7 @@ const Home = () => {
           {/* <Text style={styles.bottomButtonText}>discover</Text> */}
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.bottomButton}>
+        <TouchableOpacity onPress={oki} style={styles.bottomButton}>
           <Image source={require('../working-app/assets/icon/mylist1.png')} style={styles.customIcon1} />
           {/* <Text style={styles.bottomButtonText}>my list</Text> */}
         </TouchableOpacity>
