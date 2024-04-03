@@ -7,11 +7,11 @@ import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
-const OpenPage2= () => {
+const OpenPage7= () => {
     [];
     const navigation = useNavigation();
         const okv=()=>{
-    navigation.navigate('OpenChapters2');
+    navigation.navigate('OpenChapters7');
   }
   return (
     <View style={styles.container}>
@@ -23,7 +23,7 @@ const OpenPage2= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DS.jpeg?alt=media&token=b28548a4-97b3-4e4b-9cc6-471a57c60dd5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2FDS.jpeg?alt=media&token=237698f7-3498-43c6-b6c1-459bb2de0964'
         }}
         />
         <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
@@ -178,4 +178,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenPage2 ;
+export default OpenPage7 ;

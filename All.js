@@ -20,7 +20,7 @@ const MangaItem = ({ title, status }) => {
 const All = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.headerText}>For U ALL</Text>
+      <Text style={styles.headerText}>ALL</Text>
       <FlatList
         data={MANGA_DATA}
         renderItem={({ item }) => <MangaItem {...item} />}

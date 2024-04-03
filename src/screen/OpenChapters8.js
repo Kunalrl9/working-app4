@@ -8,11 +8,15 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Linking } from 'react-native';
 
-const OpenChapters3= () => {
+const OpenChapters8= () => {
     [];
     const navigation = useNavigation();
         const oke=()=>{
-    navigation.navigate('OpenPage3');
+    navigation.navigate('OpenPage8');
+  }
+    const navigation1 = useNavigation();
+        const okx=()=>{
+    navigation.navigate('ch1');
   }
 
   const openPDF = (chapter) => {
@@ -49,11 +53,11 @@ const OpenChapters3= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DAYS.jpeg?alt=media&token=9ce6fafb-3727-4dce-95fb-0939fef0e5ff'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
         }}
         />
-        <Text style={styles.title}>KOYOHARU GOTOUGE</Text>
-        <Text style={styles.text}>YUTO SUZUKI</Text>
+        <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
+        <Text style={styles.text}>KOYOHARU GOTOUGE</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -120,7 +124,7 @@ const OpenChapters3= () => {
         </TouchableOpacity>
         </View>
         <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={okx}>
         <View style={styles.border1}>
           <Text style={styles.read}>Read Ch.01</Text>
         </View>
@@ -250,4 +254,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenChapters3 ;
+export default OpenChapters8 ;

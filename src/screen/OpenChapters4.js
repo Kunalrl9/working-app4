@@ -8,13 +8,12 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Linking } from 'react-native';
 
-const OpenChapters2= () => {
+const OpenChapters4= () => {
     [];
     const navigation = useNavigation();
         const oke=()=>{
-    navigation.navigate('OpenPage2');
+    navigation.navigate('OpenPage4');
   }
-
 
   const openPDF = (chapter) => {
     // Define PDF links for each chapter
@@ -39,7 +38,7 @@ const OpenChapters2= () => {
             console.error('Failed to open PDF:', err);
             // Add code to handle the error (e.g., show an error message to the user)
         });
-};
+      };
   return (
     <View style={styles.container}>
         <View>
@@ -50,11 +49,11 @@ const OpenChapters2= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DS.jpeg?alt=media&token=b28548a4-97b3-4e4b-9cc6-471a57c60dd5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2FTT.jpeg?alt=media&token=4304c9bc-77d0-46e0-a24c-0d0d5fada890'
         }}
         />
-        <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
-        <Text style={styles.text}>KOYOHARU GOTOUGE</Text>
+        <Text style={styles.title}>Blue Exorcist</Text>
+        <Text style={styles.text}>KAZUE KATO</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -121,7 +120,7 @@ const OpenChapters2= () => {
         </TouchableOpacity>
         </View>
         <View>
-        <TouchableOpacity onPress={() => openPDF('ch2')}>
+        <TouchableOpacity>
         <View style={styles.border1}>
           <Text style={styles.read}>Read Ch.01</Text>
         </View>
@@ -251,4 +250,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenChapters2;
+export default OpenChapters4 ;

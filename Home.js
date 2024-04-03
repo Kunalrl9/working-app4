@@ -19,17 +19,17 @@ const Home = () => {
     { id: '3', image: require('../working-app/assets/sword-art-online-sao.png') },
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
-  
 
+  
   const menuData = [
-    { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist', image: require('../working-app/assets/TT.jpeg') },
-    { id: 'One Piece', image: require('../working-app/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen', image: require('../working-app/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..', image: require('../working-app/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...', image: require('../working-app/assets/8.jpeg') },
+    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app/assets/TT.jpeg') },
+    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app/assets/8.jpeg') },
   ];
   const navigation1 = useNavigation();
   const okx=()=>{
@@ -38,12 +38,12 @@ const Home = () => {
   
 
   const menuData2 = [
-    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', screen: 'OpenChapters1', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Blue Box', screen: 'OpenChapters2', image: require('../working-app/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', screen: 'OpenChapters3', image: require('../working-app/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', screen: 'OpenChapters4', image: require('../working-app/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', screen: 'OpenChapters5', image: require('../working-app/assets/week/314236.jpg') },
+    { id: 'Kill Blue', screen: 'OpenChapters6', image: require('../working-app/assets/week/315466.jpg') },
   ];
 
   const navigation = useNavigation();
@@ -70,27 +70,25 @@ const Home = () => {
   const okz=()=>{
     navigation.navigate('AccountScreen');
   }
-  const renderMenuItems = () =>
-    menuData.map(item => (
-      <TouchableOpacity onPress={oka} key={item.id} style={styles.menuItem}>
-        <Image source={item.image} style={styles.menuItemImage} />
-        <Text style={styles.menuItemText}> {item.id}</Text>
-      </TouchableOpacity>
-    ));
-  const navigation3 = useNavigation();
-  const oka=()=>{
-    navigation.navigate('OpenPage1');
-  }
-  const navigation7 = useNavigation();
-  const okb=()=>{
-    navigation.navigate('OpenPage2');
-  }
+  
+  const navigateToPage = (screenName) => {
+    navigation.navigate(screenName);
+  };
+   // Render menu items
+   const renderMenuItems = () =>
+   menuData.map(item => (
+     <TouchableOpacity onPress={() => navigateToPage(item.screen)} key={item.id} style={styles.menuItem}>
+       <Image source={item.image} style={styles.menuItemImage} />
+       <Text style={styles.menuItemText}>{item.id}</Text>
+     </TouchableOpacity>
+   ));
+  
 
   const renderSecondMenuItems = () =>
     menuData2.map(item => (
-    <TouchableOpacity onPress={okb} key={item.id} style={styles.menuItem2}>
+    <TouchableOpacity onPress={() => navigateToPage(item.screen)} key={item.id} style={styles.menuItem2}>
       <Image source={item.image} style={styles.menuItemImage2} />
-      <Text style={styles.menuItemText2}>Menu {item.id}</Text>
+      <Text style={styles.menuItemText2}> {item.id}</Text>
     </TouchableOpacity>
   ));
 
@@ -376,7 +374,7 @@ const styles = StyleSheet.create({
   // },
 
   searchBtn: {
-    marginLeft:350,
+    marginLeft:310,
     paddingLeft: 10,
     marginTop: -20,
   },

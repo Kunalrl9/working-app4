@@ -7,11 +7,11 @@ import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
-const OpenPage1= () => {
+const OpenPage6= () => {
     [];
     const navigation = useNavigation();
         const okv=()=>{
-    navigation.navigate('OpenChapters1');
+    navigation.navigate('OpenChapters6');
   }
   return (
     <View style={styles.container}>
@@ -23,11 +23,11 @@ const OpenPage1= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/KK.jpeg?alt=media&token=72d52ff2-a791-423d-ae34-9da85bb2f72c'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2FJJK.jpeg?alt=media&token=3fab48f1-fb31-4b93-b615-ba2cf6816873'
         }}
         />
-        <Text style={styles.title}>Kagurabachi</Text>
-        <Text style={styles.text}>HOKAZONO Takeru</Text>
+        <Text style={styles.title}>Jujutsu Kaisen</Text>
+        <Text style={styles.text}>GEGE AKUTAMI</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -44,7 +44,7 @@ const OpenPage1= () => {
         <View style={styles.line1}>
         </View>
         <View>
-        <Text style={styles.descrip}>Young Chihiro spends his days training under his famous swordsmith father. One day he hopes to become a great sword-maker himself. The goofy father and the serious son--they thought these days would last forever. But suddenly, tragedy strikes. A dark day soaked in blood. Chihiro and his blade now live only for revenge. Epic sword battle action!</Text>
+        <Text style={styles.descrip}>For some strange reason, Yuji Itadori, despite his insane athleticism would rather just hang out with the Occult Club. However, her soon finds out that the occult is as real as it gets when his fellow club members are attacked! Meanwhile, the mysterious Megumi Fushiguro is tracking down a special-grade cursed object, and his search leads him to Itadori...</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -178,4 +178,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenPage1 ;
+export default OpenPage6 ;

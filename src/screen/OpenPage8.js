@@ -7,11 +7,15 @@ import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
-const OpenPage3= () => {
+const OpenPage8= () => {
     [];
     const navigation = useNavigation();
         const okv=()=>{
-    navigation.navigate('OpenChapters3');
+    navigation.navigate('OpenChapters8');
+  }
+    const navigation1 = useNavigation();
+        const okx=()=>{
+    navigation.navigate('OpenChapters8');
   }
   return (
     <View style={styles.container}>
@@ -23,11 +27,11 @@ const OpenPage3= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/DAYS.jpeg?alt=media&token=9ce6fafb-3727-4dce-95fb-0939fef0e5ff'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
         }}
         />
-        <Text style={styles.title}>SAKAMOTO DAYS</Text>
-        <Text style={styles.text}>YUTO SUZUKI</Text>
+        <Text style={styles.title}>Demon Slayer: Kimetsu no Yaiba</Text>
+        <Text style={styles.text}>KOYOHARU GOTOUGE</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -44,7 +48,7 @@ const OpenPage3= () => {
         <View style={styles.line1}>
         </View>
         <View>
-        <Text style={styles.descrip}>Taro Sakamoto was the ultimate assassin, feared by villains and admired by hitmen. But one day...he fell in love! Retirement, marriage, fatherhood and then... Sakamoto gained weight! The chubby guy who runs the neighborhood?store is actually a former legendary hitman! Can he protect his family from danger? Get ready to experience a new kind of action comedy series!</Text>
+        <Text style={styles.descrip}>Learning to destroy demons won’t be easy, and Tanjiro barely knows where to start. The surprise appearance of another boy named Giyu, who seems to know what’s going on, might provide some answers?but only if Tanjiro can stop Giyu from killing his sister first!</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -54,7 +58,7 @@ const OpenPage3= () => {
         </TouchableOpacity>
         </View>
         <View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={okx}>
         <View style={styles.border1}>
           <Text style={styles.read}>Read Ch.01</Text>
         </View>
@@ -178,4 +182,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenPage3 ;
+export default OpenPage8 ;
