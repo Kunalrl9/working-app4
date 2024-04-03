@@ -8,8 +8,10 @@ const SignUp = () => {
  
   <ImageBackground
       source={require('./assets/bg.jpg')} // Change this to the path of your image
-      style={styles.backgroundImage}
-    ></ImageBackground>
+      style={styles.backgroundImage}>
+
+    </ImageBackground>
+
 
 
   const [email, setEmail] = useState('');

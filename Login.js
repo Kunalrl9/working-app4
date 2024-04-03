@@ -1,29 +1,30 @@
-// Import necessary components and libraries
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
-// Your Login component
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigation = useNavigation();
 
-
   const handleLogin = () => {
+    // Basic validation
+    if (username.trim() === '' || password.trim() === '') {
+      Alert.alert('Error', 'Please enter both username/email and password');
+      return;
+    }else if (password==="kunal"){
+      navigation.navigate('Home');
+    }else{
+      Alert.alert("wrong password")
+    }
+
     // Your login logic
     console.log('Username:', username);
     console.log('Password:', password);
-  };
 
-  const ok=()=>{
-    navigation.navigate('Home')
-  }
-
-  const goToHomeP = () => {
-    
-    //here the logic will come to go home page
+    // You can navigate to home page after successful login
+    // navigation.navigate('Home');
   };
 
   return (
@@ -33,7 +34,7 @@ const Login = () => {
 
       <TextInput
         style={styles.input}
-        placeholder="Username/Email"
+        placeholder="Email"
         autoCapitalize="none"
         value={username}
         onChangeText={(text) => setUsername(text)}
@@ -47,11 +48,9 @@ const Login = () => {
         onChangeText={(text) => setPassword(text)}
       />
 
-      <TouchableOpacity style={styles.submitButton} onPress={goToHomeP}>
-        <Text style={styles.submitButtonText} onPress={ok}>Login</Text>
+      <TouchableOpacity style={styles.submitButton} onPress={handleLogin}>
+        <Text style={styles.submitButtonText}>Login</Text>
       </TouchableOpacity>
-
-     
     </View>
   );
 };
@@ -102,5 +101,4 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
 });
-
 export default Login;

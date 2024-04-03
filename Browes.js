@@ -4,6 +4,7 @@ import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'reac
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TextInput } from 'react-native-gesture-handler';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function Browes() {
   const menuData3 = [
@@ -45,10 +46,13 @@ export default function Browes() {
 
   return (
     <View style={styles.container1}>
-      <Text style={styles.Text}>Browes</Text>
+      <Text style={styles.Text}>Browse</Text>
     <View>
         <TextInput placeholder='Search'
         style={styles.textInput}/>
+        <TouchableOpacity>
+        <AntDesign name="search1" size={24} color="black" style={styles.searchBtn} />
+        </TouchableOpacity>
         <View style={styles.title2}>
         <Text style={styles.title3}>By Genre</Text>
         </View>
@@ -106,6 +110,7 @@ const styles = StyleSheet.create({
       left:20,
     },
       Text: {
+        top:20,
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'left',
@@ -114,15 +119,30 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginTop: -20,
         marginBottom: 20,
-        color:'white',
+        color:'purple',
       },
     textInput:{
         padding:7,
         paddingHorizontal:16,
-        backgroundColor:'purple',
+        backgroundColor:'white',
         borderRadius:8,
-        width:'85%',
-        color:'white',
+        width:'99%',
+        color:'purple',
+        borderRadius:10,
+        borderWidth:2,
+        borderColor: 'black',
+      
+      },
+      searchBtn:{
+        top:-35,
+        left:360,
+      },
+      title2:{
+        top:-50,
+      },
+      move:{
+        top:-20,
+        left:20,
       },
       text1:{
         top:50,

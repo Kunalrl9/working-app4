@@ -38,17 +38,26 @@ const Home = () => {
   
 
   const menuData2 = [
-    {onPress:'oka', id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
     { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
     { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
     { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
     { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
     { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
   ];
+
   const navigation = useNavigation();
   const oky=()=>{
     navigation.navigate('Search');
   }
+  // const menuData3 = [
+  //   { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
+  //   { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
+  //   { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
+  //   { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
+  //   { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
+  //   { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
+  // ];
   
 
   const renderItem = ({ item }) => (
@@ -63,31 +72,48 @@ const Home = () => {
   }
   const renderMenuItems = () =>
     menuData.map(item => (
-      <TouchableOpacity  key={item.id} style={styles.menuItem}>
+      <TouchableOpacity onPress={oka} key={item.id} style={styles.menuItem}>
         <Image source={item.image} style={styles.menuItemImage} />
         <Text style={styles.menuItemText}> {item.id}</Text>
       </TouchableOpacity>
     ));
-    const navigation3 = useNavigation();
+  const navigation3 = useNavigation();
   const oka=()=>{
     navigation.navigate('OpenPage1');
+  }
+  const navigation7 = useNavigation();
+  const okb=()=>{
+    navigation.navigate('OpenPage2');
   }
 
   const renderSecondMenuItems = () =>
     menuData2.map(item => (
-    <TouchableOpacity key={item.id} style={styles.menuItem2}>
+    <TouchableOpacity onPress={okb} key={item.id} style={styles.menuItem2}>
       <Image source={item.image} style={styles.menuItemImage2} />
       <Text style={styles.menuItemText2}>Menu {item.id}</Text>
     </TouchableOpacity>
   ));
 
+  // const renderthreeMenuItems = () =>
+  //   menuData3.map(item => (
+  //   <TouchableOpacity key={item.id} style={styles.menuItem3}>
+  //     <Image source={item.image} style={styles.menuItemImage3} />
+  //     <Text style={styles.menuItemText3}>Menu {item.id}</Text>
+  //   </TouchableOpacity>
+  // ));
+
   const navigation4 = useNavigation();
   const okg=()=>{
     navigation.navigate('MangaMaker');
   }
+
   const navigation5 = useNavigation();
   const oki=()=>{
-    navigation.navigate('MangaMaker');
+    navigation.navigate('Favorite');
+  }
+  const navigation6 = useNavigation();
+  const oks=()=>{
+    navigation.navigate('All');
   }
 
   return (
@@ -109,7 +135,7 @@ const Home = () => {
           <Text style={styles.buttonText1}>For U</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>All</Text>
+          <Text style={styles.buttonText} onPress={oks}>All</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Latest</Text>
@@ -140,6 +166,10 @@ const Home = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer2}>
       {renderSecondMenuItems()}
     </ScrollView>
+    {/* <Text style={styles.title2}>User</Text>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.menuContainer3}>
+      {renderthreeMenuItems()}
+    </ScrollView> */}
 
       
     <View style={styles.test1}>
@@ -289,6 +319,11 @@ const styles = StyleSheet.create({
     width: 100,
     height: 150,
   },
+  menuItemText: {
+   textAlign: 'left',
+   fontSize: 10,
+   fontWeight: 'bold',
+ },
   menuItem2: {
     marginRight: 5,
     // borderRadius: 8,
@@ -300,12 +335,6 @@ const styles = StyleSheet.create({
     height: 150,
     bottom: -90,
   },
-   menuItemText: {
-    textAlign: 'left',
-    fontSize: 10,
-    fontWeight: 'bold',
-  },
-
   menuItemText2: {
     textAlign: 'left',
     fontSize: 10,
@@ -313,6 +342,38 @@ const styles = StyleSheet.create({
     marginBottom:-80,
     marginTop:90,
   },
+  // menuContainer3:{
+  //   marginTop: -220,
+  //   marginLeft: 0,
+  //   // marginBottom: 10,
+  //   bottom:-280,
+  // },
+  // title3:{
+  //   top: -10,
+  //   marginLeft: -340,
+  //   fontSize: 20,
+  //   marginBottom: -160,
+  //   color: 'purple',
+  // },
+  // menuItem3: {
+  //   marginRight: 5,
+  //   // borderRadius: 8,
+  //   overflow: 'visible',
+  //   margin: 5,
+  // },
+  // menuItemImage3: {
+  //   width: 100,
+  //   height: 150,
+  //   bottom: -90,
+  // },
+
+  // menuItemText3: {
+  //   textAlign: 'left',
+  //   fontSize: 10,
+  //   fontWeight: 'bold',
+  //   marginBottom:-80,
+  //   marginTop:90,
+  // },
 
   searchBtn: {
     marginLeft:350,
