@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const SignUp = () => {
+const SignUp = ({  uname, setUname }) => {
  
   <ImageBackground
       source={require('./assets/bg.jpg')} // Change this to the path of your image
@@ -27,6 +27,9 @@ const SignUp = () => {
     console.log('Login pressed!');
     console.log('Email:', email);
     console.log('Username:', username);
+    setUname(username);
+    console.log("ok:",uname);
+    
     console.log('Password:', password);
     console.log('Confirm Password:', confirmPassword);
     navigation.navigate('Login');

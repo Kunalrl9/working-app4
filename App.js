@@ -30,21 +30,27 @@ import OpenChapters7 from './src/screen/OpenChapters7';
 import OpenChapters8 from './src/screen/OpenChapters8';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import React, { useState } from 'react';
 
 
 const Stack = createStackNavigator(); 
 
 
 export default function App() {
+  const [uname,setUname]=useState("");
   return (
 <NavigationContainer>
-  <Stack.Navigator initialRouteName="SignUp">
-        <Stack.Screen name="SignUp" component={SignUp} />
+  <Stack.Navigator initialRouteName="Home">
+  <Stack.Screen name="SignUp">
+          {(props) => <SignUp {...props} uname={uname} setUname={setUname} />}
+        </Stack.Screen>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="Browes" component={Browes} />
-        <Stack.Screen name="AccountScreen" component={AccountScreen} />
+        <Stack.Screen name="AccountScreen">
+          {(props) => <AccountScreen {...props} uname={uname} setUname={setUname} />}
+        </Stack.Screen>
         <Stack.Screen name="OpenPage1" component={OpenPage1} />
         <Stack.Screen name="OpenPage2" component={OpenPage2} />
         <Stack.Screen name="OpenPage3" component={OpenPage3} />

@@ -9,8 +9,8 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 
-const AccountScreen = () => {
-  const [username, setUsername] = useState('');
+const AccountScreen = ({  uname, setUname }) => {
+  const [username, setUsername] = useState('kunal');
   const [profilePhoto, setProfilePhoto] = useState('https://ew.com/thmb/xZ6l7kNqvjMS-mzC97kFdgwGTKA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/avengers-loki-afa29e2016934818891b46f60409d8aa.jpg');
 
   const navigation = useNavigation();
@@ -51,7 +51,7 @@ const AccountScreen = () => {
           style={styles.profilePhoto}
         />
       </TouchableOpacity>
-      <Text style={styles.username}>{username}</Text>
+      <Text style={styles.username}>{uname}</Text>
       <View style={styles.line1}>
       <Text style={styles.text2}>User settings</Text>
       </View>
@@ -142,15 +142,25 @@ const styles = StyleSheet.create({
   },
   logOut:{
     top:-120,
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'left',
     textAlign:'center',
-    width:110,
+    width:140,
     height:35,
-    backgroundColor:'#E5E4E2',
+    backgroundColor:'purple',
+    color:'white',
     borderRadius:40,
-    borderWidth:2,
+    borderWidth:3,
+    shadowColor:'black',
+    elevation:8,
+  },
+  username:{
+    alignItems:'center',
+    fontSize: 19,
+    fontWeight: 'bold',
+    top:-180,
+    left:-60,
   }
 });
 
