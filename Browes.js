@@ -8,23 +8,23 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function Browes() {
   const menuData3 = [
-    { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist', image: require('../working-app/assets/TT.jpeg') },
-    { id: 'One Piece', image: require('../working-app/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen', image: require('../working-app/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..', image: require('../working-app/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...', image: require('../working-app/assets/8.jpeg') },
+    { id: 'Kagurabachi', image: require('../working-app3/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS', image: require('../working-app3/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia', image: require('../working-app3/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist', image: require('../working-app3/assets/TT.jpeg') },
+    { id: 'One Piece', image: require('../working-app3/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen', image: require('../working-app3/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..', image: require('../working-app3/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...', image: require('../working-app3/assets/8.jpeg') },
   ];
 
   const menuData4 = [
-    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', image: require('../working-app3/assets/week/311638.jpg') },
+    { id: 'Blue Box', image: require('../working-app3/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', image: require('../working-app3/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', image: require('../working-app3/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', image: require('../working-app3/assets/week/314236.jpg') },
+    { id: 'Kill Blue', image: require('../working-app3/assets/week/315466.jpg') },
   ];
 
   const renderMenuItems = () =>

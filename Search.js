@@ -9,24 +9,24 @@ import { useNavigation } from '@react-navigation/native';
 
 const Search= () =>{
   const menuData = [
-    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app/assets/TT.jpeg') },
-    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app/assets/8.jpeg') },
+    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app3/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app3/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app3/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app3/assets/TT.jpeg') },
+    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app3/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app3/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app3/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app3/assets/8.jpeg') },
   ];
   
   
   const menuData2 = [
-    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app3/assets/week/311638.jpg') },
+    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app3/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app3/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app3/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app3/assets/week/314236.jpg') },
+    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app3/assets/week/315466.jpg') },
   ];
   const navigation = useNavigation();
   const oky=()=>{

@@ -38,6 +38,11 @@ const AccountScreen = ({  uname, setUname }) => {
     });
   };
 
+  const navigation2 = useNavigation();
+  const oky1=()=>{
+    navigation2.navigate('Displaymanga');
+  }
+
   return  (
     <View style={styles.container}>
       <View>
@@ -72,7 +77,7 @@ const AccountScreen = ({  uname, setUname }) => {
           <Text style={styles.buttonText1}>Update of your favorites</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.button, styles.purpleButton]}>
-          <Text style={styles.buttonText1}>Your Progress Work</Text>
+          <Text style={styles.buttonText1} onPress={oky1} >Your Progress Work</Text>
         </TouchableOpacity>
       </View>
       <View>

@@ -40,6 +40,7 @@ import OpenChapters11 from './src/screen/OpenChapters11';
 import OpenChapters12 from './src/screen/OpenChapters12';
 import OpenChapters13 from './src/screen/OpenChapters13';
 import OpenChapters14 from './src/screen/OpenChapters14';
+import Displaymanga from './Displaymanga';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useState } from 'react';
@@ -96,6 +97,7 @@ export default function App() {
         <Stack.Screen name="MangaMaker" component={MangaMaker} />
         <Stack.Screen name="UploadManga" component={UploadManga} />
         <Stack.Screen name="UploadChapters" component={UploadChapters} />
+        <Stack.Screen name="Displaymanga" component={Displaymanga} />
         {/* <Stack.Screen name="All" component={All} /> */}
   </Stack.Navigator>
 </NavigationContainer>

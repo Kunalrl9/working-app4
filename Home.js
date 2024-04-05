@@ -14,32 +14,32 @@ import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
   const carouselData = [
-    { id: '1', image: require('../working-app/assets/fire.jpg') },
-    { id: '2', image: require('../working-app/assets/images.jpg') },
-    { id: '3', image: require('../working-app/assets/sword-art-online-sao.png') },
+    { id: '1', image: require('../working-app3/assets/fire.jpg') },
+    { id: '2', image: require('../working-app3/assets/images.jpg') },
+    { id: '3', image: require('../working-app3/assets/sword-art-online-sao.png') },
     // { id: '4', image: require('../AwesomeProject/assets/Boruto.jpeg') },
   ];
 
   
   const menuData = [
-    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app/assets/TT.jpeg') },
-    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app/assets/8.jpeg') },
+    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app3/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app3/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app3/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app3/assets/TT.jpeg') },
+    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app3/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app3/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app3/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app3/assets/8.jpeg') },
   ];
   
   
   const menuData2 = [
-    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app/assets/week/315466.jpg') },
+    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app3/assets/week/311638.jpg') },
+    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app3/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app3/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app3/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app3/assets/week/314236.jpg') },
+    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app3/assets/week/315466.jpg') },
   ];
   const navigation1 = useNavigation();
   const okx=()=>{
@@ -175,28 +175,28 @@ const Home = () => {
       {/* Five buttons at the bottom with custom icons */}
       <View style={styles.bottomButtonsContainer}>
         <TouchableOpacity style={styles.bottomButton}>
-          <Image source={require('../working-app/assets/icon/discover.png')} style={styles.customIcon} />
+          <Image source={require('../working-app3/assets/icon/discover.png')} style={styles.customIcon} />
           {/* <Text style={styles.bottomButtonText}>discover</Text> */}
         </TouchableOpacity>
 
         <TouchableOpacity onPress={oki} style={styles.bottomButton}>
-          <Image source={require('../working-app/assets/icon/mylist1.png')} style={styles.customIcon1} />
+          <Image source={require('../working-app3/assets/icon/mylist1.png')} style={styles.customIcon1} />
           {/* <Text style={styles.bottomButtonText}>my list</Text> */}
         </TouchableOpacity>
 
         <TouchableOpacity onPress={okg} style={[styles.bottomButton, styles.floatingButton]}>
-          <Image source={require('../working-app/assets/icon/Agontales.png')} style={styles.customIcon2} />
+          <Image source={require('../working-app3/assets/icon/Agontales.png')} style={styles.customIcon2} />
           {/* <Text style={styles.bottomButtonText}>Manga makre</Text> */}
         </TouchableOpacity>
 
         <TouchableOpacity onPress={okx} style={styles.bottomButton}>
-          <Image  source={require('../working-app/assets/icon/browes.png')} style={styles.customIcon3} />
+          <Image  source={require('../working-app3/assets/icon/browes.png')} style={styles.customIcon3} />
           {/* <Text style={styles.bottomButtonText}>borwer</Text> */}
         </TouchableOpacity>
         
 
         <TouchableOpacity onPress={okz} style={styles.bottomButton}>
-          <Image source={require('../working-app/assets/icon/account3.png')} style={styles.customIcon4} />
+          <Image source={require('../working-app3/assets/icon/account3.png')} style={styles.customIcon4} />
           {/* <Text style={styles.bottomButtonText}>account</Text> */}
         </TouchableOpacity>
       </View>
