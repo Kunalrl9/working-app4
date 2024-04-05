@@ -5,39 +5,48 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TextInput } from 'react-native-gesture-handler';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Search() {
-  const menuData3 = [
-    { id: 'Kagurabachi', image: require('../working-app/assets/KK.jpeg') },
-    { id: 'SAKAMOTO DAYS', image: require('../working-app/assets/DAYS.jpeg') },
-    { id: 'My Hero Academia', image: require('../working-app/assets/MHA.jpeg') },
-    { id: 'Blue Exorcist', image: require('../working-app/assets/TT.jpeg') },
-    { id: 'One Piece', image: require('../working-app/assets/OP.jpeg') },
-    { id: 'Jujutsu Kaisen', image: require('../working-app/assets/JJK.jpeg') },
-    { id: 'Demon Slayer:..', image: require('../working-app/assets/DS.jpeg') },
-    { id: 'Sachi’s Records...', image: require('../working-app/assets/8.jpeg') },
+const Search= () =>{
+  const menuData = [
+    { id: 'Kagurabachi', screen: 'OpenPage1', image: require('../working-app/assets/KK.jpeg') },
+    { id: 'SAKAMOTO DAYS',  screen: 'OpenPage2', image: require('../working-app/assets/DAYS.jpeg') },
+    { id: 'My Hero Academia',  screen: 'OpenPage3', image: require('../working-app/assets/MHA.jpeg') },
+    { id: 'Blue Exorcist',  screen: 'OpenPage4', image: require('../working-app/assets/TT.jpeg') },
+    { id: 'One Piece',  screen: 'OpenPage5', image: require('../working-app/assets/OP.jpeg') },
+    { id: 'Jujutsu Kaisen',  screen: 'OpenPage6', image: require('../working-app/assets/JJK.jpeg') },
+    { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app/assets/DS.jpeg') },
+    { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app/assets/8.jpeg') },
   ];
-
-  const menuData4 = [
-    { id: 'Akane-banashi', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', image: require('../working-app/assets/week/315466.jpg') },
+  
+  
+  const menuData2 = [
+    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app/assets/week/314236.jpg') },
+    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app/assets/week/315466.jpg') },
   ];
-
-  const renderMenuItems = () =>
-    menuData3.map(item => (
-      <TouchableOpacity key={item.id} style={styles.menuItem}>
-        <Image source={item.image} style={styles.menuItemImage} />
-        <Text style={styles.menuItemText}> {item.id}</Text>
-      </TouchableOpacity>
-    ));
+  const navigation = useNavigation();
+  const oky=()=>{
+    navigation.navigate('Search');
+  }
+  const navigateToPage = (screenName) => {
+    navigation.navigate(screenName);
+  };
+   // Render menu items
+   const renderMenuItems = () =>
+   menuData.map(item => (
+     <TouchableOpacity onPress={() => navigateToPage(item.screen)} key={item.id} style={styles.menuItem}>
+       <Image source={item.image} style={styles.menuItemImage} />
+       <Text style={styles.menuItemText}>{item.id}</Text>
+     </TouchableOpacity>
+   ));
 
   const renderSecondMenuItems = () =>
-    menuData4.map(item => (
-    <TouchableOpacity key={item.id} style={styles.menuItem2}>
+    menuData2.map(item => (
+    <TouchableOpacity onPress={() => navigateToPage(item.screen)} key={item.id} style={styles.menuItem2}>
       <Image source={item.image} style={styles.menuItemImage2} />
       <Text style={styles.menuItemText2}>Menu {item.id}</Text>
     </TouchableOpacity>
@@ -91,7 +100,7 @@ export default function Search() {
         
       </View>
   );
-}
+};
 const styles = StyleSheet.create({
     container2: {
       width:395,
@@ -451,4 +460,4 @@ const styles = StyleSheet.create({
         // marginBottom:-80,
         // marginTop:90,
       },
-});
+});export default Search;

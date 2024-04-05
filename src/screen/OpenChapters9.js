@@ -8,11 +8,11 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Linking } from 'react-native';
 
-const OpenChapters8= () => {
+const OpenChapters9= () => {
     [];
     const navigation = useNavigation();
         const oke=()=>{
-    navigation.navigate('OpenPage8');
+    navigation.navigate('OpenPage9');
   }
     const navigation1 = useNavigation();
         const okx=()=>{
@@ -53,11 +53,11 @@ const OpenChapters8= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F311638.jpg?alt=media&token=0e5ae317-112e-4549-a0e3-a05f4adb719b'
         }}
         />
-        <Text style={styles.title}>Sachi’s Records 〜Sachi’s Book of Revelation〜</Text>
-        <Text style={styles.text}>CHANTA</Text>
+        <Text style={styles.title}>Akane-banashi</Text>
+        <Text style={styles.text}>YUKI SUENAGA / TAKAMASA MOUE</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -167,9 +167,9 @@ const styles = StyleSheet.create({
     },
     text:{
         top:140,
-        left:120,
+        left:90,
         textAlign:'center',
-        width:150,
+        width:250,
         height:20,
         backgroundColor:'white',
         borderRadius:10,
@@ -254,4 +254,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenChapters8 ;
+export default OpenChapters9 ;

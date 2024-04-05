@@ -31,20 +31,20 @@ const Home = () => {
     { id: 'Demon Slayer:..',  screen: 'OpenPage7', image: require('../working-app/assets/DS.jpeg') },
     { id: 'Sachi’s Records...',screen: 'OpenPage8', image: require('../working-app/assets/8.jpeg') },
   ];
+  
+  
+  const menuData2 = [
+    { id: 'Akane-banashi', screen: 'OpenPage9', image: require('../working-app/assets/week/311638.jpg') },
+    { id: 'Blue Box', screen: 'OpenPage10', image: require('../working-app/assets/week/311824.jpg') },
+    { id: 'Me & Roboco', screen: 'OpenPage11', image: require('../working-app/assets/week/313120.jpg') },
+    { id: 'Nue s Exorcist', screen: 'OpenPage12', image: require('../working-app/assets/week/313420.jpg') },
+    { id: 'WITCH WATCH', screen: 'OpenPage13', image: require('../working-app/assets/week/314236.jpg') },
+    { id: 'Kill Blue', screen: 'OpenPage14', image: require('../working-app/assets/week/315466.jpg') },
+  ];
   const navigation1 = useNavigation();
   const okx=()=>{
     navigation.navigate('Browes');
   }
-  
-
-  const menuData2 = [
-    { id: 'Akane-banashi', screen: 'OpenChapters1', image: require('../working-app/assets/week/311638.jpg') },
-    { id: 'Blue Box', screen: 'OpenChapters2', image: require('../working-app/assets/week/311824.jpg') },
-    { id: 'Me & Roboco', screen: 'OpenChapters3', image: require('../working-app/assets/week/313120.jpg') },
-    { id: 'Nue s Exorcist', screen: 'OpenChapters4', image: require('../working-app/assets/week/313420.jpg') },
-    { id: 'WITCH WATCH', screen: 'OpenChapters5', image: require('../working-app/assets/week/314236.jpg') },
-    { id: 'Kill Blue', screen: 'OpenChapters6', image: require('../working-app/assets/week/315466.jpg') },
-  ];
 
   const navigation = useNavigation();
   const oky=()=>{
@@ -203,7 +203,7 @@ const Home = () => {
     </View>
   </View>
   );
-};
+}
 
 
 

@@ -8,11 +8,11 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Linking } from 'react-native';
 
-const OpenChapters8= () => {
+const OpenChapters13= () => {
     [];
     const navigation = useNavigation();
         const oke=()=>{
-    navigation.navigate('OpenPage8');
+    navigation.navigate('OpenPage13');
   }
     const navigation1 = useNavigation();
         const okx=()=>{
@@ -53,11 +53,11 @@ const OpenChapters8= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F314236.jpg?alt=media&token=603a5dd7-9b29-4178-904a-1daae86a5ecf'
         }}
         />
-        <Text style={styles.title}>Sachi’s Records 〜Sachi’s Book of Revelation〜</Text>
-        <Text style={styles.text}>CHANTA</Text>
+        <Text style={styles.title}>WITCH WATCH</Text>
+        <Text style={styles.text}>KENTA SHINOHARA</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -254,4 +254,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenChapters8 ;
+export default OpenChapters13 ;

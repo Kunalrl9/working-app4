@@ -7,15 +7,15 @@ import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
-const OpenPage8= () => {
+const OpenPage9= () => {
     [];
     const navigation = useNavigation();
         const okv=()=>{
-    navigation.navigate('OpenChapters8');
+    navigation.navigate('OpenChapters9');
   }
     const navigation1 = useNavigation();
         const okx=()=>{
-    navigation.navigate('OpenChapters8');
+    navigation.navigate('OpenChapters9');
   }
   return (
     <View style={styles.container}>
@@ -27,11 +27,11 @@ const OpenPage8= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F311638.jpg?alt=media&token=0e5ae317-112e-4549-a0e3-a05f4adb719b'
         }}
         />
-        <Text style={styles.title}>Sachi’s Records 〜Sachi’s Book of Revelation〜</Text>
-        <Text style={styles.text}>CHANTA</Text>
+        <Text style={styles.title}>Akane-banashi</Text>
+        <Text style={styles.text}>YUKI SUENAGA / TAKAMASA MOUE</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -48,7 +48,7 @@ const OpenPage8= () => {
         <View style={styles.line1}>
         </View>
         <View>
-        <Text style={styles.descrip}>‘Humanity’s Judgment’ ? a process by which an angel and a demon meticulously pass judgment upon a human, and the final score determines the fate of mankind. But this time, the chosen subject is the incredibly mischievous 6-year-old elementary school student, Sachi Ueno?! Just how will the unconventional living arrangement of an angel, a demon, and a human shape the future of humanity?</Text>
+        <Text style={styles.descrip}>Rakugo--the ultimate form of storytelling, where everything in a story is expressed with just your body and words. Shinta and his daughter Akane have been seduced by this wonderful form of classical entertainment. Having observed her father strive to pass the shin'uchi rakugo test, Akane will take her own steps into this unique world!</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -100,9 +100,9 @@ const styles = StyleSheet.create({
     },
     text:{
         top:140,
-        left:120,
+        left:90,
         textAlign:'center',
-        width:150,
+        width:250,
         height:20,
         backgroundColor:'white',
         borderRadius:10,
@@ -182,4 +182,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenPage8 ;
+export default OpenPage9 ;

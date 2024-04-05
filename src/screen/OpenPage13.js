@@ -7,15 +7,15 @@ import Carousel from 'react-native-snap-carousel';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 
-const OpenPage8= () => {
+const OpenPage13= () => {
     [];
     const navigation = useNavigation();
         const okv=()=>{
-    navigation.navigate('OpenChapters8');
+    navigation.navigate('OpenChapters13');
   }
     const navigation1 = useNavigation();
         const okx=()=>{
-    navigation.navigate('OpenChapters8');
+    navigation.navigate('OpenChapters13');
   }
   return (
     <View style={styles.container}>
@@ -27,11 +27,11 @@ const OpenPage8= () => {
         <View style={styles.backBlue}>
         <Image style={styles.image1}
         source={{
-            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F8.jpeg?alt=media&token=a10e688c-6d4a-482b-bcab-da40c5443cb5'
+            uri:'https://firebasestorage.googleapis.com/v0/b/agontales-e51c7.appspot.com/o/manga%20image%2F314236.jpg?alt=media&token=603a5dd7-9b29-4178-904a-1daae86a5ecf'
         }}
         />
-        <Text style={styles.title}>Sachi’s Records 〜Sachi’s Book of Revelation〜</Text>
-        <Text style={styles.text}>CHANTA</Text>
+        <Text style={styles.title}>WITCH WATCH</Text>
+        <Text style={styles.text}>KENTA SHINOHARA</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -48,7 +48,7 @@ const OpenPage8= () => {
         <View style={styles.line1}>
         </View>
         <View>
-        <Text style={styles.descrip}>‘Humanity’s Judgment’ ? a process by which an angel and a demon meticulously pass judgment upon a human, and the final score determines the fate of mankind. But this time, the chosen subject is the incredibly mischievous 6-year-old elementary school student, Sachi Ueno?! Just how will the unconventional living arrangement of an angel, a demon, and a human shape the future of humanity?</Text>
+        <Text style={styles.descrip}>Morihito, a boy with the strength of an ogre, is about to start living together with his childhood friend NIko, who is training to be a witch. NIko's magic leads to all sorts of unpredictable trouble, and with two teens under one roof... Let the fantastical antics begin!?Magical comedy series by Kenta Shinohara creator of?SKET DANCE?and?Astra Lost in Space.</Text>
         </View>
         <View>
         <TouchableOpacity>
@@ -182,4 +182,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OpenPage8 ;
+export default OpenPage13 ;

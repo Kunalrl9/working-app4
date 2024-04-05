@@ -12,11 +12,11 @@ export default function Favorite() {
       }
     const navigation1 = useNavigation();
     const okx=()=>{
-        navigation.navigate('OpenPage2');
+        navigation.navigate('OpenPage7');
       }
     const navigation2 = useNavigation();
     const okk=()=>{
-        navigation.navigate('OpenPage3');
+        navigation.navigate('OpenPage2');
       }
   return (
     <View style={styles.container}>
